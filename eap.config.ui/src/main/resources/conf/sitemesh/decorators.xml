@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/views/common/layout/">
+	<excludes>
+		<pattern>/static/*</pattern>
+		<pattern>*.pjax</pattern>
+	</excludes>
+	
+	<decorator name="printable" page="printableLayout.jsp" />
+	
+	<decorator name="main" page="mainLayout.jsp">
+		<pattern>/*.htm</pattern>
+	</decorator>
+	
+</decorators>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="eap.config.ui">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="_eap.web-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.web/_eap.web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.core-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.core/_eap.core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.cookie-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.cookie/_eap.comps.cookie">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.webevent-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.webevent/_eap.comps.webevent">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.token-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.token/_eap.comps.token">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.datastore-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.datastore/_eap.comps.datastore">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.cache-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.cache/_eap.comps.cache">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.codetable-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.codetable/_eap.comps.codetable">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="eap.config-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/eap.config/eap.config">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="_eap.comps.orm.mybatis-1.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/_eap.comps.orm.mybatis/_eap.comps.orm.mybatis">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="eap.config.ui"/>
+        <property name="java-output-path" value="/eap.config.ui/target/classes"/>
+    </wb-module>
+</project-modules>

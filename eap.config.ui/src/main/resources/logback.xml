@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+
+	<property name="LOG_DIR" value="/data/logs/${app.name}/${app.id}" />
+	
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] ${app.name} [%thread] %X{ip} %logger{50}\(%file:%line\) - %msg%n</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+	</appender>
+	<appender name="runtimeAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/runtime.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_DIR}/otherdays/runtime-%d{yyyyMMdd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>104857600</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<MaxHistory>360</MaxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] ${app.name} [%thread] %X{ip} %logger{50}\(%file:%line\) - %msg%n</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+	</appender>
+	
+	<root level="INFO">
+		<appender-ref ref="runtimeAppender" />
+		<appender-ref ref="consoleAppender" />
+	</root>
+	<logger name="freemarker.runtime" >
+		<level value="ERROR" />
+	</logger>
+	<logger name="org">
+		<level value="INFO" />
+	</logger>
+	<logger name="com">
+		<level value="INFO" />
+	</logger>
+</configuration>

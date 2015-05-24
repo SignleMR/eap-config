@@ -1,0 +1,18 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+	<ear-subdeployments-isolated>true</ear-subdeployments-isolated>
+	<deployment>
+		<dependencies>
+			<module name="org.bouncycastle" />
+		</dependencies>
+		<exclusions>
+			<module name="org.hibernate" />
+			<module name="org.hibernate.validator" />
+			<module name="org.apache.commons.logging" />
+			<module name="org.slf4j" />
+			<module name="org.slf4j.ext" />
+			<module name="org.slf4j.jcl-over-slf4j" />
+			<module name="org.slf4j.impl" />
+			<module name="org.apache.log4j" />
+		</exclusions>
+	</deployment>
+</jboss-deployment-structure>
